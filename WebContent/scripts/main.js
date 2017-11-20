@@ -248,9 +248,9 @@
 		// successful callback
 		function(res) {
 			var items = JSON.parse(res);
-			//if("result" in items){
-			//	window.location = "./index.html";
-			//}
+			if('result' in items){
+				window.location = "./index.html";
+			}
 			if (!items || items.length === 0) {
 				showWarningMessage('No nearby item.');
 			} else {
@@ -276,9 +276,9 @@
 
 		// make AJAX call
 		ajax('GET', url, req, function(res) {
-			//if("result" in items){
-			//	window.location = "./index.html";
-			//}
+			if('result' in items){
+				window.location = "./index.html";
+			}
 			var items = JSON.parse(res);
 			if (!items || items.length === 0) {
 				showWarningMessage('No favorite item.');
@@ -306,9 +306,9 @@
 		ajax('GET',url + '?' + params,req,
 				// successful callback
 				function(res) {
-					//if("result" in items){
-					//	window.location = "./index.html";
-					//}
+					if('result' in items){
+						window.location = "./index.html";
+					}
 					var items = JSON.parse(res);
 					if (!items || items.length === 0) {
 						showWarningMessage('No recommended item. Make sure you have favorites.');
@@ -354,13 +354,32 @@
 			}
 		});
 	}
+	
+	function logOut(){
+		console.log('user_logout');
+		var url = './logout'
+			var req = null;
+			ajax('GET', url, req, function(res) {
+				var result = JSON.parse(res);
+				if (result.result === 'SUCCESS') {
+					window.location = "./login.html";
+				} 
+			});
+		
+		
+	}
+	
+	function logOut(){
+		alert("For test");
+	}
 
 	function init() {
 		// Register event listeners
 		$('nearby-btn').addEventListener('click', loadNearbyItems);
 		$('fav-btn').addEventListener('click', loadFavoriteItems);
 		$('recommend-btn').addEventListener('click', loadRecommendedItems);
-
+		$('logout_link').addEventListener('click',logOut);
+		$('about_link').addEventListener('click',AboutMe);
 		initGeoLocation();
 	}
 	

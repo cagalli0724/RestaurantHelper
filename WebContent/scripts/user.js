@@ -38,6 +38,8 @@
 		    xhr.send(data);
 		  }
 	}
+	
+
 
 
 function verifyUser() {
