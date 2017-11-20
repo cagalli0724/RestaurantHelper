@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Restauraut Helper">
+  <meta name="author" content="Yipei Zhu">
+  <title>Restaurant Helper</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/user.js"></script>
+</head>
+<body>
+  
+  <header class="top-header">
+    <nav class="top-nav">
+      <a href="#">Home</a>
+      <a href="#">Contact</a>
+      <a href="#">About</a>
+    </nav>
+    <span id="welcome-msg"></span>
+  </header>
+  
+  <div class="container">
+    <header>
+      <p>
+        <span>Restaurant</span>
+        <br /> Helper
+      </p>
+    </header>
+
+    <section class="main-section">
+    <br>
+    <h1 style="text-align:center">Login</h1>
+	  <form method="POST" >
+	  	<table id="table1">
+	  		<tr>
+	  			<th align="right">UserName</th>
+	  			<td><input type="text" id="user_name" name="user_name"></td>
+	  		</tr>
+	  		<tr>
+	  			<th align="right">Password</th>
+	  			<td><input type="text" id="user_password" name="user_password"></td>
+	  		</tr>
+	  		<tr>
+	  			<td colspan="2" align="center">
+	  				<input type="button" onClick="verifyUser()"  value="Log In">
+	  			</td>
+	  		</tr>
+	  	</table>
+	  </form>
+	  <br><br>
+    </section>
+  </div>
+  
+  <footer>
+    <p class="title">What We Do</p>
+    <p>"Help you find the best restaurants around."</p>
+    <ul>
+      <li>
+        <p><i class="fa fa-map-o fa-2x"></i></p>
+        <p>LaiOffer office, CA</p>
+      </li>
+      <li>
+        <p><i class="fa fa-envelope-o fa-2x"></i></p>
+        <p>cagalli072411@gmail.com</p>
+      </li>
+      <li>
+        <p><i class="fa fa-phone fa-2x"></i></p>
+        <p>+1 415 910 0766</p>
+      </li>
+    </ul>
+  </footer>
+</body>
+
+</html>
